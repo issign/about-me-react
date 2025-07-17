@@ -19,7 +19,7 @@ const About = () => {
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col items-center md:items-start justify-center gap-3"
@@ -46,6 +46,12 @@ const About = () => {
             <BiLogoYoutube className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-red-500 hover:-rotate-12 transition-all duration-300 ease-in-out" />
           </div>
         </motion.div>
+
+        <img
+          src="/kiho.png"
+          className="w-[300px] md:w-[400px] rounded-full hover:shadow-2xl hover:shadow-blue-800 hovr:scale-105 hover:rotate-2 transition-all duration-500"
+          alt=""
+        />
       </motion.div>
     </div>
   );
