@@ -1,14 +1,7 @@
-import portfolio1 from "../../../public/portfolio1.jpg";
-import portfolio2 from "../../../public/portfolio2.jpg";
-import portfolio3 from "../../../public/portfolio3.jpg";
-import portfolio4 from "../../../public/portfolio4.jpg";
-import portfolio5 from "../../../public/portfolio5.jpg";
-import portfolio6 from "../../../public/portfolio6.jpg";
-
 export const projectsList = [
   {
     id: 1,
-    image: portfolio1,
+    image: "/portfolio1.jpg",
     title: "Project 1",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
@@ -17,7 +10,7 @@ export const projectsList = [
   },
   {
     id: 2,
-    image: portfolio2,
+    image: "/portfolio2.jpg",
     title: "Project 2",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
@@ -26,7 +19,7 @@ export const projectsList = [
   },
   {
     id: 3,
-    image: portfolio3,
+    image: "/portfolio3.jpg",
     title: "Project 3",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
@@ -35,7 +28,7 @@ export const projectsList = [
   },
   {
     id: 4,
-    image: portfolio4,
+    image: "/portfolio4.jpg",
     title: "Project 4",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
@@ -44,7 +37,7 @@ export const projectsList = [
   },
   {
     id: 5,
-    image: portfolio5,
+    image: "/portfolio5.jpg",
     title: "Project 5",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
@@ -53,7 +46,7 @@ export const projectsList = [
   },
   {
     id: 6,
-    image: portfolio6,
+    image: "/portfolio6.jpg",
     title: "Project 6",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, accusantium fugit sit doloremque saepe perferendis, qui et officia beatae autem quo repellendus adipisci maiores voluptatum deserunt aut? Dolores, molestiae quam.",
