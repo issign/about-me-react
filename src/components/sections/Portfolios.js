@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { projectsList } from "./data/projectsList";
+import { projectsList } from "../data/projectsList";
 
 const Portfolios = () => {
   const projects = projectsList.map((project) => (

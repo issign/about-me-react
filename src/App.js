@@ -1,7 +1,7 @@
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Portfolios from "./components/Portfolios";
-import Contact from "./components/Contact";
+import Navbar from "./components/sections/Navbar";
+import About from "./components/sections/About";
+import Portfolios from "./components/sections/Portfolios";
+import Contact from "./components/sections/Contact";
 
 function App() {
   return (
