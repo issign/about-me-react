@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
+import Link from "../ui/Link";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,15 +20,15 @@ function Navbar() {
         </a>
 
         <ul className="hidden md:flex gap-10">
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#about">About</a>
-          </li>
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#portfolios">Portfolios</a>
-          </li>
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#contact">Contact</a>
-          </li>
+          <Link href="#about" desktop>
+            About
+          </Link>
+          <Link href="#portfolios" desktop>
+            Portfolios
+          </Link>
+          <Link href="#contact" desktop>
+            Contact
+          </Link>
         </ul>
 
         <button className="md:hidden" onClick={toggleMobileMenu}>
@@ -36,21 +37,15 @@ function Navbar() {
 
         {isMenuOpen && (
           <ul className="md:hidden absolute top-16 left-0 right-0 bg-black/90 border-b border-gray-800 space-y-5 py-16 text-center">
-            <li className="group px-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-              <a href="#about" onClick={toggleMobileMenu}>
-                <span className="text-lg">About</span>
-              </a>
-            </li>
-            <li className="group px-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-              <a href="#portfolios" onClick={toggleMobileMenu}>
-                <span className="text-lg">Portfolios</span>
-              </a>
-            </li>
-            <li className="group px-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-              <a href="#contact" onClick={toggleMobileMenu}>
-                <span className="text-lg">Contact</span>
-              </a>
-            </li>
+            <Link href="#about" mobile onClick={toggleMobileMenu}>
+              <span className="text-lg">About</span>
+            </Link>
+            <Link href="#portfolios" mobile onClick={toggleMobileMenu}>
+              <span className="text-lg">Portfolios</span>
+            </Link>
+            <Link href="#contact" mobile onClick={toggleMobileMenu}>
+              <span className="text-lg">Contact</span>
+            </Link>
           </ul>
         )}
       </nav>
