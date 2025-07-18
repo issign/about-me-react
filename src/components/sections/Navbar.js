@@ -11,8 +11,8 @@ function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 w-full backdrop-blur-md bg-black/30 border-b border-gray-700 border-opacity-20 z-50">
-      <nav className="max-w-7xl mx-auto p-6 lg:px-8 flex items-center justify-between text-white">
+    <header className="fixed top-0 w-full z-50">
+      <nav className="m-4 px-6 py-4 lg:px-8 rounded border border-gray-400 border-opacity-20 flex items-center justify-between text-white">
         <a
           href="#about"
           className="text-xl md:text-2xl font-semibold color-primary text-transparent bg-clip-text hover:scale-110 transition-all duration-300"
