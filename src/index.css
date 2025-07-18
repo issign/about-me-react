@@ -18,3 +18,7 @@
 ::-webkit-scrollbar {
   width: 20px;
 }
+
+.color-primary {
+  @apply bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400;
+}

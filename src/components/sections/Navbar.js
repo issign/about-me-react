@@ -12,10 +12,10 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 w-full backdrop-blur-md bg-black/30 border-b border-gray-700 border-opacity-20 z-50">
-      <nav className="max-w-7xl mx-auto p-6 lg:px-32 flex items-center justify-between text-white">
+      <nav className="max-w-7xl mx-auto p-6 lg:px-8 flex items-center justify-between text-white">
         <a
           href="#about"
-          className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 text-transparent bg-clip-text hover:scale-110 transition-all duration-300"
+          className="text-xl md:text-2xl font-semibold color-primary text-transparent bg-clip-text hover:scale-110 transition-all duration-300"
         >
           Kiho
         </a>
@@ -23,6 +23,12 @@ function Navbar() {
         <ul className="hidden md:flex gap-10">
           <Link href="#about" desktop>
             About
+          </Link>
+          <Link href="#experience" desktop>
+            Experience
+          </Link>
+          <Link href="#skills" desktop>
+            Skills
           </Link>
           <Link href="#portfolios" desktop>
             Portfolios
