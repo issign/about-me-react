@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import Link from "../ui/Link";
+import Button from "../ui/Button";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,10 +27,9 @@ function Navbar() {
           <Link href="#portfolios" desktop>
             Portfolios
           </Link>
-          <Link href="#contact" desktop>
-            Contact
-          </Link>
         </ul>
+
+        <Button primary>Contact</Button>
 
         <button className="md:hidden" onClick={toggleMobileMenu}>
           <BiMenu className="text-3xl" />
