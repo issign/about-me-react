@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div
       className="mx-auto max-w-6xl w-full min-h-screen p-4 md:p-8 lg:p-28 flex items-center justify-center"
-      id="about"
+      id="home"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

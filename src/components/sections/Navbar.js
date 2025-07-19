@@ -1,14 +1,69 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import Link from "../ui/Link";
 import Button from "../ui/Button";
 
+const sections = ["home", "about", "experience", "skills", "portfolios"];
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const observers = [];
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (!section) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(section);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const desktopNavLinks = sections.map((section) => {
+    return (
+      <Link
+        href={`#${section}`}
+        desktop
+        isActive={activeSection === section}
+        key={section}
+      >
+        {section.charAt(0).toUpperCase() + section.slice(1)}
+      </Link>
+    );
+  });
+
+  const mobileNavLinks = sections.map((section) => {
+    return (
+      <Link
+        href={`#${section}`}
+        mobile
+        onClick={toggleMobileMenu}
+        isActive={activeSection === section}
+        key={section}
+      >
+        <span className="text-lg">
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </span>
+      </Link>
+    );
+  });
 
   return (
     <header className="fixed top-0 w-full z-50">
@@ -20,20 +75,7 @@ function Navbar() {
           Kiho
         </a>
 
-        <ul className="hidden md:flex gap-10">
-          <Link href="#about" desktop>
-            About
-          </Link>
-          <Link href="#experience" desktop>
-            Experience
-          </Link>
-          <Link href="#skills" desktop>
-            Skills
-          </Link>
-          <Link href="#portfolios" desktop>
-            Portfolios
-          </Link>
-        </ul>
+        <ul className="hidden md:flex gap-10">{desktopNavLinks}</ul>
 
         <Button primary>Contact</Button>
 
@@ -43,15 +85,7 @@ function Navbar() {
 
         {isMenuOpen && (
           <ul className="md:hidden absolute top-16 left-0 right-0 bg-black/90 border-b border-gray-800 space-y-5 py-16 text-center">
-            <Link href="#about" mobile onClick={toggleMobileMenu}>
-              <span className="text-lg">About</span>
-            </Link>
-            <Link href="#portfolios" mobile onClick={toggleMobileMenu}>
-              <span className="text-lg">Portfolios</span>
-            </Link>
-            <Link href="#contact" mobile onClick={toggleMobileMenu}>
-              <span className="text-lg">Contact</span>
-            </Link>
+            {mobileNavLinks}
           </ul>
         )}
       </nav>
