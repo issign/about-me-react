@@ -4,7 +4,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoYoutube } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-const About = () => {
+const Home = () => {
   return (
     <div
       className="mx-auto max-w-6xl w-full min-h-screen p-4 md:p-8 lg:p-28 flex items-center justify-center"
@@ -57,4 +57,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;
