@@ -24,20 +24,15 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col items-center md:items-start justify-center gap-3"
         >
-          <span className="px-2 py-1 text-white bg-zinc-800 rounded-full text-xs md:text-sm">
-            Open to hire
-          </span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-center md:text-left color-primary text-transparent bg-clip-text">
             Kiho Lee
           </h1>
           <h3 className="text-xl md:text-2xl lg:text-3xl font-light text-center md:text-left bg-gradient-to-r from-blue-400 via-sky-400 to-blue-600 text-transparent bg-clip-text">
             Web Developer
           </h3>
-          <p className="text-sm text-slate-400 text-center md:text-left text-pretty">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-            perspiciatis harum iure exercitationem laudantium quod hic, in fuga
-            dicta reiciendis ea vel sit! Quas molestias earum aliquid iure,
-            tenetur distinctio!
+          <p className="text-md text-slate-400 text-center md:text-left text-pretty">
+            클릭하면 반응하고, 스크롤하면 움직이는 웹. 보기엔 간단하지만, 그
+            속엔 수많은 고민과 디테일이 숨어 있습니다. 저는 그 과정을 즐깁니다.
           </p>
 
           <div className="flex gap-5 mt-3">
