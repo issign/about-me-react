@@ -77,7 +77,9 @@ function Navbar() {
 
         <ul className="hidden md:flex gap-10">{desktopNavLinks}</ul>
 
-        <Button primary>Contact</Button>
+        <Button primary>
+          <a href="#contact">Contact</a>
+        </Button>
 
         <button className="md:hidden" onClick={toggleMobileMenu}>
           <BiMenu className="text-3xl" />
