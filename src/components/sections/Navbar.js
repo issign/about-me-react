@@ -67,7 +67,7 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50 ">
-      <nav className="m-4 px-6 py-4 lg:px-8 backdrop-blur-md rounded border border-gray-400 border-opacity-20 flex items-center justify-between text-white">
+      <nav className="mx-12 my-4 px-6 py-4 lg:px-8 backdrop-blur-md rounded border border-gray-400 border-opacity-20 flex items-center justify-between text-white">
         <a
           href="#about"
           className="text-xl md:text-2xl font-semibold color-primary text-transparent bg-clip-text hover:scale-110 transition-all duration-300"

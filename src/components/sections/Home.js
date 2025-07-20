@@ -34,12 +34,6 @@ const Home = () => {
             클릭하면 반응하고, 스크롤하면 움직이는 웹. 보기엔 간단하지만, 그
             속엔 수많은 고민과 디테일이 숨어 있습니다. 저는 그 과정을 즐깁니다.
           </p>
-
-          <div className="flex gap-5 mt-3">
-            <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-indigo-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
-            <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-blue-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
-            <BiLogoYoutube className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-red-500 hover:-rotate-12 transition-all duration-300 ease-in-out" />
-          </div>
         </motion.div>
 
         <img
@@ -48,6 +42,12 @@ const Home = () => {
           alt=""
         />
       </motion.div>
+
+      <div className="flex flex-col-reverse gap-5 mt-3 absolute left-0 ml-12 pb-24 min-h-screen">
+        <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-indigo-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
+        <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-blue-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
+        <BiLogoYoutube className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-red-500 hover:-rotate-12 transition-all duration-300 ease-in-out" />
+      </div>
     </div>
   );
 };
