@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { BiMenu } from "react-icons/bi";
+import { BiX } from "react-icons/bi";
+import { BiLogoGithub } from "react-icons/bi";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { BiLogoInstagram } from "react-icons/bi";
 import Link from "../ui/Link";
 import Button from "../ui/Button";
+import Icon from "../ui/Icon";
 
 const sections = ["home", "about", "experience", "skills", "portfolios"];
 
@@ -58,7 +64,7 @@ function Navbar() {
         isActive={activeSection === section}
         key={section}
       >
-        <span className="text-lg">
+        <span className="text-2xl">
           {section.charAt(0).toUpperCase() + section.slice(1)}
         </span>
       </Link>
@@ -84,13 +90,52 @@ function Navbar() {
         <button className="md:hidden" onClick={toggleMobileMenu}>
           <BiMenu className="text-3xl" />
         </button>
-
-        {isMenuOpen && (
-          <ul className="md:hidden absolute top-16 left-0 right-0 bg-black/90 border-b border-gray-800 space-y-5 py-16 text-center">
-            {mobileNavLinks}
-          </ul>
-        )}
       </nav>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden fixed top-0 right-0 w-[70%] h-full bg-black flex justify-center"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.4 }}
+          >
+            <button
+              onClick={toggleMobileMenu}
+              className="absolute right-0 mr-20 mt-6"
+            >
+              <BiX className="text-3xl text-white text-5xl " />
+            </button>
+
+            <ul className="space-y-10 flex flex-col justify-center items-center text-center text-white">
+              {mobileNavLinks}
+            </ul>
+            <div className="md:hidden flex flex-col-reverse gap-5 absolute right-0 bottom-0 mr-20 pb-12">
+              <Icon href="https://github.com/issign" className="text-3xl">
+                <BiLogoGithub />
+              </Icon>
+              <Icon
+                href="https://github.com/kiho2734?tab=repositories"
+                className="text-3xl"
+              >
+                <BiLogoGithub />
+              </Icon>
+              <Icon
+                href="https://www.linkedin.com/in/kiholeedeveloper/"
+                className="text-3xl"
+              >
+                <BiLogoLinkedin />
+              </Icon>
+              <Icon
+                href="https://www.instagram.com/kiho_lee2734/"
+                className="text-3xl"
+              >
+                <BiLogoInstagram />
+              </Icon>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
