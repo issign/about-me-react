@@ -17,7 +17,7 @@ const About = () => {
       </motion.h1>
 
       <motion.div
-        className="flex justify-center items-center"
+        className="flex justify-center items-center flex-col lg:flex-row"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -33,7 +33,7 @@ const About = () => {
           alt=""
         />
         <motion.p
-          className="px-20 text-lg"
+          className="px-20 text-lg pt-8 lg:pt-0"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
