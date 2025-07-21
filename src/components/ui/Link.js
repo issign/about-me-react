@@ -13,7 +13,7 @@ const Link = ({ href, children, desktop, mobile, isActive, ...rest }) => {
 
   return (
     <li>
-      <a href={href} {...rest} className={classes}>
+      <a href={href} {...rest} className={classes} target="_blank">
         {children}
       </a>
     </li>

@@ -1,7 +1,7 @@
-import React from "react";
+import Icon from "../ui/Icon";
 import { BiLogoGithub } from "react-icons/bi";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { BiLogoYoutube } from "react-icons/bi";
+import { BiLogoInstagram } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -43,10 +43,32 @@ const Home = () => {
         />
       </motion.div>
 
-      <div className="flex flex-col-reverse gap-5 mt-3 absolute left-0 ml-12 pb-24 min-h-screen">
-        <BiLogoGithub className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-indigo-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
-        <BiLogoLinkedin className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-blue-500 hover:rotate-12 transition-all duration-300 ease-in-out" />
-        <BiLogoYoutube className="text-2xl md:text-3xl text-white cursor-pointer hover:scale-110 hover:text-red-500 hover:-rotate-12 transition-all duration-300 ease-in-out" />
+      <div className="hidden md:flex flex-col-reverse gap-5 mt-3 absolute left-0 ml-12 pb-24 min-h-screen">
+        <Icon
+          className="hover:text-[#4078c0] hover:-rotate-12"
+          href="https://github.com/issign"
+        >
+          <BiLogoGithub />
+        </Icon>
+        <Icon
+          className="hover:text-indigo-500 hover:rotate-12"
+          href="https://github.com/kiho2734?tab=repositories"
+        >
+          <BiLogoGithub />
+        </Icon>
+        <Icon
+          className="hover:text-blue-500 hover:-rotate-12"
+          href="https://www.linkedin.com/in/kiholeedeveloper/"
+        >
+          <BiLogoLinkedin />
+        </Icon>
+        <Icon
+          className="hover:text-[#C1275A] hover:rotate-12"
+          href="https://www.instagram.com/kiho_lee2734/"
+        >
+          <BiLogoInstagram />
+        </Icon>
+        <div className="border-l lg:h-[500px] border-gray-400 border-opacity-40"></div>
       </div>
     </div>
   );
