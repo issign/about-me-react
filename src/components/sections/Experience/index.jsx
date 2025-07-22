@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ExperienceCard from "./components/ExperienceCard";
+import Header from "../../ui/Header";
 
 const experiences = [
   {
@@ -32,15 +33,7 @@ const Experience = () => {
       id="experience"
       className="min-h-screen relative mx-auto max-w-6xl p-4 sm:p-10 text-white flex flex-col items-center justify-center"
     >
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-6xl absolute top-0 mt-8"
-      >
-        Experience
-      </motion.h1>
+      <Header>Experiences</Header>
 
       <motion.div
         className="relative m-auto max-w-[1200px] flex flex-wrap before:content-[''] before:absolute before:w-[5px] before:h-full before:bg-blue-500 before:left-[calc(50%-1px)]"
