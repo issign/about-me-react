@@ -22,3 +22,7 @@
 .color-primary {
   @apply bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400;
 }
+
+.dot-glow {
+  box-shadow: 0 0 25px #3b82f6, 0 0 50px #3b82f6;
+}
