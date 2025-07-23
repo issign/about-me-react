@@ -23,6 +23,7 @@ const experienceList = experiences.map((experience) => {
       date={experience.date}
       label={experience.label}
       content={experience.content}
+      key={experience.label}
     ></ExperienceCard>
   );
 });
